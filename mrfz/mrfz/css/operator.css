@@ -1,0 +1,940 @@
+a{text-decoration: none}
+/*icon图标网页url（iconfont获取）*/
+@font-face {
+    font-family: 'iconfont';  /* Project id 4677271 */
+    src: url('http://at.alicdn.com/t/c/font_4677271_d2ffcism4f.woff2?t=1725699019072') format('woff2'),
+    url('http://at.alicdn.com/t/c/font_4677271_d2ffcism4f.woff?t=1725699019072') format('woff'),
+    url('http://at.alicdn.com/t/c/font_4677271_d2ffcism4f.ttf?t=1725699019072') format('truetype');
+}
+@font-face {
+    font-family: 'iconfont';  /* Project id 4677228 */
+    src: url('http://at.alicdn.com/t/c/font_4677228_o2fh2zgh8r.woff2?t=1725699414768') format('woff2'),
+    url('http://at.alicdn.com/t/c/font_4677228_o2fh2zgh8r.woff?t=1725699414768') format('woff'),
+    url('http://at.alicdn.com/t/c/font_4677228_o2fh2zgh8r.ttf?t=1725699414768') format('truetype');
+}
+@font-face {
+    font-family: 'iconfont';  /* Project id 4677228 */
+    src: url('http://at.alicdn.com/t/c/font_4677228_dnqfojvpz1b.woff2?t=1725699849440') format('woff2'),
+    url('http://at.alicdn.com/t/c/font_4677228_dnqfojvpz1b.woff?t=1725699849440') format('woff'),
+    url('http://at.alicdn.com/t/c/font_4677228_dnqfojvpz1b.ttf?t=1725699849440') format('truetype');
+}
+/*页面布局*/
+body{
+    display: flex;/*弹性布局*/
+    position: fixed;
+    margin: 0;
+    background-image: url("../image/bg_m.866db098.png");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    animation: bodyBackground 0.5s linear 3s;
+    animation-fill-mode: forwards;
+    z-index: 999;
+}
+.centralicon{
+    display: flex;
+    position: fixed;
+    left: 600px;
+    height: 400px;
+    width: 550px;
+    top:250px;
+    animation:centraliconBackground 1s linear 1.2s ;
+    animation-fill-mode: forwards;
+    z-index: 998;
+}
+@keyframes centraliconBackground {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.topbox{
+    display: flex;
+    position: relative;
+    /*background-color: red;*/
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    z-index: 90;
+}
+.topbox img{
+    width: 300px;
+    height: 200px;
+    margin-top: -50px;
+    margin-left: -80px;
+}
+.sy2{
+    position: fixed;
+    display: flex;
+    margin-top: 30px;
+    margin-left: 800px;
+    font-weight: 900;
+    animation: topBackground 4s linear 0s;
+    animation-fill-mode: forwards;
+}
+@keyframes topBackground {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/*左上角图标*/
+.topicon{
+    margin-left:-100px;
+    margin-top: 50px;
+    height: 40px;
+    width: 90px;
+    display: flex;
+    position: absolute;
+    animation: iconBackground 4s linear 0s;
+    animation-fill-mode: forwards;
+}
+@keyframes iconBackground {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/*导航栏文字大小和间隔设置*/
+.one{
+    font-size:  1.2em;/*文字大小*/
+    color: white;
+}
+.one:hover{
+    color: skyblue;
+}
+.two{
+    font-size:  1.2em;
+    margin-left: 80px;/*间隔40px*/
+    color: white;
+}
+.two:hover{
+    color: skyblue;
+}
+.three{
+    font-size:  1.2em;
+    margin-left: 80px;
+    color: white;
+}
+.three:hover{
+    color: skyblue;
+}
+.four{
+    font-size:  1.2em;
+    margin-left: 80px;
+    color: white;
+}
+.four:hover{
+    color: skyblue;
+}
+.five{
+    font-size:  1.2em;
+    margin-left: 80px;
+    color: white;
+}
+.five:hover{
+    color: skyblue;
+}
+.sy1{
+    font-size: 0.5em;
+}
+.gy1{
+    font-size: 0.5em;
+}
+.qb1{
+    font-size: 0.5em;
+}
+.sd1{
+    font-size: 0.5em;
+}
+.tl1{
+    font-size: 0.5em;
+}
+.topLines{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: -10px;
+    border-top: 1px solid white;
+    animation: topLinesBackground 0.5s linear 3s;
+    animation-fill-mode: forwards;
+    z-index: 80;
+}
+@keyframes topLinesBackground {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    60%{
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(110px);
+    }
+}
+.sideLines{
+    display: flex;
+    position: fixed;
+    height: 100%;
+    right: -10px;
+    border-right: 1px solid white;
+    animation: sideLinesBackground 0.5s linear 3s;
+    animation-fill-mode: forwards;
+    z-index: 81;
+}
+@keyframes  sideLinesBackground{
+    0% {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    60%{
+        opacity: 0;
+        transform: translateX(-230px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-260px);
+    }
+}
+.toptb{
+    display: flex;
+    position: fixed;
+    right: 100%;
+    height:80px;
+}
+.toptb1{
+    position: fixed;
+    display: flex;
+    font-family: iconfont;/*导入iconfont图标*/
+    color: white;
+    opacity: 0.8;
+    font-size: 40px;
+    left: 97.5%;
+    margin-top: 1.8%;
+    animation: toptb1Background 4s linear 0s;
+    animation-fill-mode: forwards;
+}
+.toptb1:hover{
+    color: skyblue;
+}
+@keyframes toptb1Background {
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.toptb2{
+    position: fixed;
+    display: flex;
+    font-family: iconfont;
+    color: skyblue;
+    opacity: 0.8;
+    font-size: 40px;
+    margin-left: 93.5%;
+    margin-top: 1.8%;
+    animation: toptb2Background 4s linear 0s;
+    animation-fill-mode: forwards;
+}
+@keyframes toptb2Background {
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.toptb3{
+    position: fixed;
+    display: flex;
+    font-family: iconfont;
+    color: white;
+    opacity: 0.8;
+    font-size: 45px;
+    margin-left: 89%;
+    margin-top: 1.7%;
+    animation: toptb3Background 4s linear 0s;
+    animation-fill-mode: forwards;
+}
+.toptb3:hover{
+    color: skyblue;
+}
+@keyframes toptb3Background {
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/*左边的文字时间*/
+.sidesj{
+    display: flex;
+    top: 50%;
+    z-index: 998;
+}
+.sj1{
+    position: fixed;
+    display: flex;
+    color: #0099ff;
+    right: 130px;
+    bottom: -110px;
+    font-size: 65px;
+    font-weight: 900;
+    animation: sj1Background 1s linear 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes sj1Background {
+    0% {
+        opacity: 0;
+        transform: translateY(-400px);
+    }
+    60% {
+        opacity: 0;
+        transform: translateY(-500px);
+    }
+    80% {
+        opacity: 0;
+        transform: translateY(-550px);
+    }
+    90% {
+        opacity: 0.8;
+        transform: translateY(-570px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-590px);
+    }
+}
+.sj2{
+    position: fixed;
+    display: flex;
+    color: white;
+    right: 4%;
+    bottom: -20px;
+    font-size: 15px;
+    font-style: italic;
+    animation: sj2Background 1.3s linear 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes sj2Background {
+    0% {
+        opacity: 0;
+        transform: translateY(-400px);
+    }
+    60% {
+        opacity: 0;
+        transform: translateY(-450px);
+    }
+    80% {
+        opacity: 0;
+        transform: translateY(-490px);
+    }
+    90% {
+        opacity: 0.8;
+        transform: translateY(-520px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-540px);
+    }
+}
+.sj3{
+    position: fixed;
+    display: flex;
+    color: white;
+    right: 3.8%;
+    bottom: -10px;
+    font-size: 7px;
+    font-weight: 900;
+    font-style: italic;
+    animation: sj3Background 1.5s linear 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes sj3Background {
+    0% {
+        opacity: 0;
+        transform: translateY(-400px);
+    }
+    60% {
+        opacity: 0;
+        transform: translateY(-450px);
+    }
+    80% {
+        opacity: 0;
+        transform: translateY(-490px);
+    }
+    90% {
+        opacity: 0.8;
+        transform: translateY(-500px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-520px);
+    }
+}
+.sj4{
+    display: flex;
+    position: fixed;
+    color: white;
+    width: 142px;
+    height: 40px;
+    right: 55px;
+    bottom: -50px;
+    font-size: 16px ;
+    font-weight: 900;
+    font-style: italic;
+    animation: sj4Background 1.8s linear 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes sj4Background {
+    0% {
+        opacity: 0;
+        transform: translateY(-400px);
+    }
+    60% {
+        opacity: 0;
+        transform: translateY(-420px);
+    }
+    80% {
+        opacity: 0;
+        transform: translateY(-446px);
+    }
+    90% {
+        opacity: 0.8;
+        transform: translateY(-476px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-510px);
+    }
+}
+/*下面的背景*/
+.BottomImage{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("../image/bg2.e562d9ae.png");
+    animation: BOtBackgroutnd 4s linear 0s;
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+@keyframes BOtBackgroutnd {
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/*上方的背景图盒子设置*/
+.diC{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 62%;
+}
+/*角色介绍的盒子设置*/
+.js{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 290px;
+    margin-top: 150px;
+    animation: jsBackgroutnd 5s linear 0s; /*设置一个5秒的动画*/
+    animation-fill-mode: forwards;/*显示后一直停留*/
+}
+@keyframes jsBackgroutnd {
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/*第一个角色的信息和图片设置*/
+.kal{
+    animation: kalBackgroutnd 5s linear 0s;
+    animation-fill-mode: forwards;
+}
+@keyframes kalBackgroutnd {
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.kal1{
+    display: flex;
+    position: fixed;
+    left: 40px;
+}
+.kal2{
+    display: flex;
+    position: fixed;
+    left: 40px;
+    top: 170px;
+    z-index: 20;
+}
+.kal3{
+    display: flex;
+    position: fixed;
+    left: 210px;
+    width: 50px;
+    height: 70px;
+    z-index: 20;
+}
+.kal4{
+    display: flex;
+    position: fixed;
+    height: 120px;
+    width: 390px;
+    left: 40px;
+    top: 310px;
+    background-color: black;
+}
+.kal5 img{
+    display: flex;
+    position: fixed;
+    height: 70px;
+    width: 400px;
+    top: 200px;
+    left: 35px;
+    opacity: 0.5;
+    z-index: 10;
+}
+.kal6{
+    display: flex;
+    position: fixed;
+    height: 1000px;
+    width: 100px;
+    left: 600px;
+}
+/*第二个角色的信息和图片设置*/
+.amy{
+    animation: kalBackgroutnd 5s linear 0s;
+    animation-fill-mode: forwards;
+}
+@keyframes kalBackgroutnd {
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.amy1{
+    display: flex;
+    position: fixed;
+    left: 40px;
+}
+.amy2{
+    display: flex;
+    position: fixed;
+    left: 40px;
+    top: 170px;
+    z-index: 20;
+}
+.amy3{
+    display: flex;
+    position: fixed;
+    left: 210px;
+    width: 50px;
+    height: 70px;
+    z-index: 20;
+}
+.amy4{
+    display: flex;
+    position: fixed;
+    height: 120px;
+    width: 390px;
+    left: 40px;
+    top: 310px;
+    background-color: black;
+}
+.amy5 img{
+    display: flex;
+    position: fixed;
+    height: 70px;
+    width: 400px;
+    top: 200px;
+    left: 35px;
+    opacity: 0.5;
+    z-index: 10;
+}
+.amy6{
+    display: flex;
+    position: fixed;
+    height: 1000px;
+    width: 100px;
+    left: 600px;
+}
+/*第三个角色的信息和图片设置*/
+.chen1{
+    display: flex;
+    position: fixed;
+    left: 40px;
+}
+.chen2{
+    display: flex;
+    position: fixed;
+    left: 40px;
+    top: 170px;
+    z-index: 20;
+}
+.chen3{
+    display: flex;
+    position: fixed;
+    left: 120px;
+    width: 50px;
+    height: 70px;
+    top: 160px;
+    z-index: 20;
+}
+.chen4{
+    display: flex;
+    position: fixed;
+    height: 120px;
+    width: 390px;
+    left: 40px;
+    top: 310px;
+    background-color: black;
+}
+.chen5 img{
+    display: flex;
+    position: fixed;
+    height: 70px;
+    width: 250px;
+    top: 200px;
+    left: 35px;
+    opacity: 0.5;
+    z-index: 10;
+}
+.chen6{
+    display: flex;
+    position: fixed;
+    height: 1000px;
+    width: 100px;
+    left: 550px;
+}
+/*第四个角色的信息和图片设置*/
+.texas1{
+    display: flex;
+    position: fixed;
+    left: 40px;
+}
+.texas2{
+    display: flex;
+    position: fixed;
+    left: 40px;
+    top: 170px;
+    z-index: 20;
+}
+.texas3{
+    display: flex;
+    position: fixed;
+    left: 300px;
+    width: 50px;
+    height: 70px;
+    top: 170px;
+    z-index: 20;
+}
+.texas4{
+    display: flex;
+    position: fixed;
+    height: 120px;
+    width: 390px;
+    left: 40px;
+    top: 310px;
+    background-color: black;
+}
+.texas5 img{
+    display: flex;
+    position: fixed;
+    height: 70px;
+    width: 250px;
+    top: 200px;
+    left: 35px;
+    opacity: 0.5;
+    z-index: 10;
+}
+.texas6{
+    display: flex;
+    position: fixed;
+    height: 1000px;
+    width: 100px;
+    left: 550px;
+}
+/*第五个角色的信息和图片设置*/
+.exu1{
+    display: flex;
+    position: fixed;
+    left: 40px;
+}
+.exu2{
+    display: flex;
+    position: fixed;
+    left: 40px;
+    top: 170px;
+    z-index: 20;
+}
+.exu3{
+    display: flex;
+    position: fixed;
+    left: 220px;
+    top: 170px;
+    width: 50px;
+    height: 70px;
+    z-index: 20;
+}
+.exu4{
+    display: flex;
+    position: fixed;
+    height: 120px;
+    width: 390px;
+    left: 40px;
+    top: 310px;
+    background-color: black;
+}
+.exu5 img{
+    display: flex;
+    position: fixed;
+    height: 70px;
+    width: 400px;
+    top: 200px;
+    left: 35px;
+    opacity: 0.5;
+    z-index: 10;
+}
+.exu6{
+    display: flex;
+    position: fixed;
+    height: 1000px;
+    width: 100px;
+    left: 600px;
+}
+/*第六个角色的信息和图片设置*/
+.pti1{
+    display: flex;
+    position: fixed;
+    left: 40px;
+}
+.pti2{
+    display: flex;
+    position: fixed;
+    left: 40px;
+    top: 170px;
+    z-index: 20;
+}
+.pti3{
+    display: flex;
+    position: fixed;
+    left: 220px;
+    top: 170px;
+    width: 50px;
+    height: 70px;
+    z-index: 20;
+}
+.pti4{
+    display: flex;
+    position: fixed;
+    height: 140px;
+    width: 390px;
+    left: 40px;
+    top: 300px;
+    background-color: black;
+}
+.pti5 img{
+    display: flex;
+    position: fixed;
+    height: 70px;
+    width: 400px;
+    top: 200px;
+    left: 35px;
+    opacity: 0.5;
+    z-index: 10;
+}
+.pti6{
+    display: flex;
+    position: fixed;
+    height: 1000px;
+    width: 100px;
+    left: 600px;
+}
+/*选项卡的设置*/
+.xxk{
+    width: 800px;
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-top: 450px;
+    margin-left:-280px;
+    animation: xxkBackgroutnd 5s linear 0s;
+    animation-fill-mode: forwards;
+    z-index: 999;
+}
+@keyframes xxkBackgroutnd {
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/*选项卡内每个盒子的设置*/
+.zp{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+/*选项卡内每个照片的设置*/
+.zp img{
+    height: 280px;
+    width: 150px;
+    left: 50px;
+    border:10px solid white;
+    text-align: center;
+    cursor: pointer;
+}
+/*鼠标移动到照片会变色（鼠标事件）*/
+.zp img:hover{
+    border: 10px solid gray;
+}
+/*上方每个角色的背景图设置*/
+.back1{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 60%;
+    background-image: url("../image/kaltsit_e2_styled.94b12054.png");
+    animation: backBackgroutnd 4s linear 0s;
+    animation-fill-mode: forwards;
+    z-index: 50;
+}
+@keyframes backBackgroutnd {
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.back2{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 60%;
+    background-image: url("../image/amiya_e1_styled.db35f491.png");
+    z-index: 50;
+}
+.back3{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 60%;
+    background-image: url("../image/chen_e2_styled.3825ba6a.png");
+    z-index: 50;
+}
+.back4{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 60%;
+    background-image: url("../image/texas_e2_styled.9c04f6eb.png");
+    z-index: 50;
+}
+.back5{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 60%;
+    background-image: url("../image/exusiai_e2_styled.9163271b.png");
+    z-index: 50;
+}
+.back6{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 60%;
+    background-image: url("../image/ptilopsis_e2_styled.8d260dbb.png");
+    z-index: 50;
+}
+.anu{
+    display: flex;
+    position: fixed;
+    height: 150px;
+    width: 50px;
+    background-color: red;
+    right: 250px;
+    bottom: 150px;
+
+}
+.kex{
+    height: 150px;
+    width: 50px;
+    justify-content: center;
+
+}
+.anu1{
+    display: flex;
+    position: fixed;
+    margin-top: 50px;
+    color: deepskyblue;
+    border-left: 6px solid deepskyblue;
+}
+.anu2{
+    display: flex;
+    position: fixed;
+    margin-top: 100px;
+    color: darkgrey;
+    border-left: 6px solid darkgrey;
+}

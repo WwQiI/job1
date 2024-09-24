@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/world.css">
+</head>
+<body>
+<div class="centralicon">
+    <img src="image/logo-new.avif" class="central icon" alt="Example Image">
+</div>
+<div class="topbox">
+    <img src="image/logo-new.avif" class="topicon"/>
+    <div class="sy2">
+        <a class="one" href="loging.html" >
+            <div class="sy" >INDEX</div>
+            <div class="sy1">首页</div>
+        </a>
+        <a class="two" href="information.html">
+            <div class="qb">INFORMATION</div>
+            <div class="qb1">情报</div>
+        </a>
+        <a class="three" href="operator.html">
+            <div class="gy">OPERATOR</div>
+            <div class="gy1">干员</div>
+        </a>
+        <a class="four" href="">
+            <div class="sd" style="color: skyblue">WORLD</div>
+            <div class="sd1" style="color: skyblue">设定</div>
+        </a>
+        <a class="five" href="">
+            <div class="tl">MEDIA</div>
+            <div class="tl1">泰拉万象</div>
+        </a>
+    </div>
+    <div class="toptb">
+        <a class="toptb1" href="">&#xe605;</a>
+        <a class="toptb2" href="">&#xef54;</a>
+        <a class="toptb3" href="">&#xe650;</a>
+    </div>
+</div>
+<div class="topLines"></div>
+<div class="sideLines"></div>
+<div class="sidesj">
+    <div class="sj1">03</div>
+    <div class="sj2">// 00 / 05</div>
+    <div class="sj3">A  R  K  I  G  H  T  S</div>
+    <div class="sj4">H O M E P A G E</div>
+</div>
+<!--左边选项的设置-->
+<div class="js">
+<!--    第一个选项的设置-->
+    <div class="ys">
+        <div class="ori1" style="font-size: 40px;font-weight: 900">源石</div>
+        <div class="ori2" style="font-size: 20px;font-weight: 900">ORIGINIUMS</div>
+        <div class="ori3"><img src="image/originiums.9f8e9628.png"/> </div>
+        <div class="ori4" style="font-size: 55px;font-weight: 900">ORIGINIUMS</div>
+    </div>
+    <!--    第二个选项的设置-->
+    <div class="ysjy">
+        <div class="jy1" style="font-size: 40px;font-weight: 900">源石技艺</div>
+        <div class="jy2" style="font-size: 20px;font-weight: 900">ORIGINIUM ARTS</div>
+        <div class="jy3"><img src="image/originium_arts.59c1b8e9.png"> </div>
+        <div class="jy4" style="font-size: 55px;font-weight: 900">ORIGINIUM ARTS</div>
+    </div>
+    <!--    第三个选项的设置-->
+    <div class="zhyd">
+        <div class="zhyd1" style="font-size: 40px;font-weight: 900">整合运动</div>
+        <div class="zhyd2" style="font-size: 20px;font-weight: 900">REUNION</div>
+        <div class="zhyd3"><img src="image/reunion.0f1a9e2b.png"></div>
+        <div class="zhyd4" style="font-size: 55px;font-weight: 900">REUNION</div>
+    </div>
+    <!--    第四个选项的设置-->
+    <div class="grz">
+        <div class="grz1" style="font-size: 40px;font-weight: 900">感染者</div>
+        <div class="grz2" style="font-size: 20px;font-weight: 900">INFECTED</div>
+        <div class="grz3"><img src="image/infected.da8e117c.png"> </div>
+        <div class="grz4" style="font-size: 55px;font-weight: 900">INFECTED</div>
+    </div>
+    <!--    第五个选项的设置-->
+    <div class="ydcb">
+        <div class="ydcb1" style="font-size: 40px;font-weight: 900">移动城邦</div>
+        <div class="ydcb2" style="font-size: 20px;font-weight: 900">NOMADIC CITY</div>
+        <div class="ydcb3"><img src="image/nomadic_city.b6c65b2a.png"> </div>
+        <div class="ydcb4" style="font-size: 55px;font-weight: 900">NOMADIC CITY</div>
+    </div>
+    <!--    第六个选项的设置-->
+    <div class="ldd">
+        <div class="ldd1" style="font-size: 40px;font-weight: 900">罗德岛</div>
+        <div class="ldd2" style="font-size: 20px;font-weight: 900">RHODES ISLAND</div>
+        <div class="ldd3"><img src="image/rhodes_island.4f587114.png"> </div>
+        <div class="ldd4" style="font-size: 55px;font-weight: 900">RHODES ISLAND</div>
+    </div>
+</div>
+</body>
+<script>
+    windowAddMouseWheel();
+    function windowAddMouseWheel() {
+        var scrollFunc = function (e) {
+            e = e || window.event;
+            if (e.wheelDelta) {
+                //判断浏览器IE，谷歌的滚动事件
+                if (e.wheelDelta > 0) {
+                    //鼠标向上滚动
+                    window.location.href = 'operator.html'
+                }
+                if (e.wheelDelta < 0) {
+                    window.location.href = 'world.html'
+                }
+            } else if (e.detail) {
+                // Firefox滚动事件
+                if (e.detail > 0) {
+                    window.location.href = 'operator.html'
+                }
+                if (e.detail < 0) {
+                    window.location.href = 'world.html'
+                }
+            }
+        };
+        if (document.addEventListener) {
+            // Firefox使用DOMMouseScroll绑定
+            document.addEventListener('DOMMouserScroll', scrollFunc, false);
+        }
+        //ie google
+        window.onmousewheel = document.onmousewheel = scrollFunc;
+    }
+
+</script>
+</html>

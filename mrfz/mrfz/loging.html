@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <--!链接css-->
+    <link rel="stylesheet" type="text/css" href="css/loging.css"/>
+<body>
+<video autoplay muted loop id="oneVideo">
+    <source src="MV/1.mkv">
+</video>
+<!--左上角图标跟中心loggo-->
+<div class="hidden">
+    <div class="icon">
+        <img class="icon1" src="image/logo-new.avif" alt="Example Image"/>
+    </div>
+   <div class="image">
+       <img class="image1" src="image/logo-new.avif" alt="Example Image"/>
+   </div>
+    <div class="bottom">
+        <div class="left">@YSQD</div>
+        <div class="rt">
+            <progress max="100" value="0" id="jd" style="height: 1px;width: 600px;background-color: white;"></progress>
+            <div class="tk" style="margin-top: 5px;font-size: 13px">LOGIN-<span id="sp" style="color: grey"></span>... </div>
+        </div>
+    </div>
+</div>
+<!--首页导航栏-->
+<div class="topPage" >
+    <div class="sy2">
+        <a class="one" href="" >
+            <div class="sy" style="color: skyblue">INDEX</div>
+            <div class="sy1" style="color: skyblue">首页</div>
+        </a>
+        <a class="two" href="information.html">
+            <div class="qb">INFORMATION</div>
+            <div class="qb1">情报</div>
+        </a>
+        <a class="three" href="operator.html">
+            <div class="gy">OPERATOR</div>
+            <div class="gy1">干员</div>
+        </a>
+        <a class="four" href="world.html">
+            <div class="sd">WORLD</div>
+            <div class="sd1">设定</div>
+        </a>
+        <a class="five" href="">
+            <div class="tl">MEDIA</div>
+            <div class="tl1">泰拉万象</div>
+        </a>
+    </div>
+</div>
+<div class="topBox"></div>
+<div class="sideIn"></div>
+<div class="sideOut"></div>
+<div class="bottomOut"></div>
+<div class="bottomFont">
+    <div class="ark" >ARKNIGHTS</div>
+    <div class="hyp">© HYPERGRYPH</div>
+    <div class="rho">RHODES ISLAND</div>
+    <div class="http">WATH CAN I SAY MANBA OUT</div>
+</div>
+<div class="mask">
+    <img src="image/mask.png" alt="Example Image"/>
+</div>
+<div class="topIcon">
+    <a class="topIcon1" href="">&#xe605;</a>
+    <a class="topIcon2" href="">&#xef54;</a>
+    <a class="topIcon3" href="">&#xe650;</a>
+</div>
+<div class="sideTime">
+    <div class="st1">00</div>
+    <div class="st2">// 00 / 05</div>
+    <div class="st3">A  R  K  I  G  H  T  S</div>
+    <div class="st4">H O M E P A G E</div>
+</div>
+</body>
+<script>
+    // 获取元素，getElementById是获取id名字（滚动条）
+    let proObj = document.getElementById('jd');
+    console.log(proObj.value);
+    const myIimer = setInterval(()=>{
+        if (proObj.value<100){
+            proObj.value+=1;
+            const spanObj = document.getElementById('sp');
+            console.log(spanObj)
+            spanObj.innerHTML=proObj.value + '%';
+            spanObj.style.left=proObj.value*3 + 'px';
+        }else {
+            clearInterval(myIimer);
+        }
+    },50)
+    windowAddMouseWheel();
+    function windowAddMouseWheel() {
+        var scrollFunc =function (e) {
+            e = e || window.event;
+            if (e.wheelDelta){
+                //判断浏览器IE，谷歌的滚动事件
+                if (e.wheelDelta > 0){
+                    //鼠标向上滚动
+                    window.location.href='loging.html'
+                }
+                if (e.wheelDelta < 0){
+                    window.location.href='information.html'
+                }
+            }else if (e.detail){
+                // Firefox滚动事件
+                if (e.detail > 0){
+                    window.location.href='loging.html'
+                }
+                if (e.detail < 0){
+                    window.location.href='information.html'
+                }
+            }
+        };
+        if (document.addEventListener){
+            // Firefox使用DOMMouseScroll绑定
+            document.addEventListener('DOMMouserScroll',scrollFunc,false);
+        }
+        //ie google
+        window.onmousewheel = document.onmousewheel = scrollFunc;
+    }
+</script>
+</html>

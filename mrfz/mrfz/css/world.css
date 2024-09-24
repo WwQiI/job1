@@ -1,0 +1,771 @@
+a{text-decoration: none}
+/*icon图标网页url（iconfont获取）*/
+@font-face {
+    font-family: 'iconfont';  /* Project id 4677271 */
+    src: url('http://at.alicdn.com/t/c/font_4677271_d2ffcism4f.woff2?t=1725699019072') format('woff2'),
+    url('http://at.alicdn.com/t/c/font_4677271_d2ffcism4f.woff?t=1725699019072') format('woff'),
+    url('http://at.alicdn.com/t/c/font_4677271_d2ffcism4f.ttf?t=1725699019072') format('truetype');
+}
+@font-face {
+    font-family: 'iconfont';  /* Project id 4677228 */
+    src: url('http://at.alicdn.com/t/c/font_4677228_o2fh2zgh8r.woff2?t=1725699414768') format('woff2'),
+    url('http://at.alicdn.com/t/c/font_4677228_o2fh2zgh8r.woff?t=1725699414768') format('woff'),
+    url('http://at.alicdn.com/t/c/font_4677228_o2fh2zgh8r.ttf?t=1725699414768') format('truetype');
+}
+@font-face {
+    font-family: 'iconfont';  /* Project id 4677228 */
+    src: url('http://at.alicdn.com/t/c/font_4677228_dnqfojvpz1b.woff2?t=1725699849440') format('woff2'),
+    url('http://at.alicdn.com/t/c/font_4677228_dnqfojvpz1b.woff?t=1725699849440') format('woff'),
+    url('http://at.alicdn.com/t/c/font_4677228_dnqfojvpz1b.ttf?t=1725699849440') format('truetype');
+}
+/*页面布局*/
+body{
+    display: flex;/*弹性布局*/
+    position: fixed;
+    margin: 0;
+    background-color: black;
+    animation: bodyBackground 0.5s linear 3s;
+    animation-fill-mode: forwards;
+    z-index: 999;
+}
+.centralicon{
+    display: flex;
+    position: fixed;
+    left: 600px;
+    height: 400px;
+    width: 550px;
+    top:250px;
+    animation:centraliconBackground 1s linear 1.2s ;
+    animation-fill-mode: forwards;
+    z-index: 998;
+}
+@keyframes centraliconBackground {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.topbox{
+    display: flex;
+    position: relative;
+    /*background-color: red;*/
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    z-index: 90;
+}
+.topbox img{
+    width: 300px;
+    height: 200px;
+    margin-top: -50px;
+    margin-left: -80px;
+}
+.sy2{
+    position: fixed;
+    display: flex;
+    margin-top: 30px;
+    margin-left: 800px;
+    font-weight: 900;
+    animation: topBackground 4s linear 0s;
+    animation-fill-mode: forwards;
+}
+@keyframes topBackground {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/*左上角图标*/
+.topicon{
+    margin-left:-100px;
+    margin-top: 50px;
+    height: 40px;
+    width: 90px;
+    display: flex;
+    position: absolute;
+    animation: iconBackground 4s linear 0s;
+    animation-fill-mode: forwards;
+}
+@keyframes iconBackground {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/*导航栏文字大小和间隔设置*/
+.one{
+    font-size:  1.2em;/*文字大小*/
+    color: white;
+}
+.one:hover{
+    color: skyblue;
+}
+.two{
+    font-size:  1.2em;
+    margin-left: 80px;/*间隔40px*/
+    color: white;
+}
+.two:hover{
+    color: skyblue;
+}
+.three{
+    font-size:  1.2em;
+    margin-left: 80px;
+    color: white;
+}
+.three:hover{
+    color: skyblue;
+}
+.four{
+    font-size:  1.2em;
+    margin-left: 80px;
+    color: white;
+}
+.four:hover{
+    color: skyblue;
+}
+.five{
+    font-size:  1.2em;
+    margin-left: 80px;
+    color: white;
+}
+.five:hover{
+    color: skyblue;
+}
+.sy1{
+    font-size: 0.5em;
+}
+.gy1{
+    font-size: 0.5em;
+}
+.qb1{
+    font-size: 0.5em;
+}
+.sd1{
+    font-size: 0.5em;
+}
+.tl1{
+    font-size: 0.5em;
+}
+.topLines{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: -10px;
+    border-top: 1px solid white;
+    animation: topLinesBackground 0.5s linear 3s;
+    animation-fill-mode: forwards;
+    z-index: 80;
+}
+@keyframes topLinesBackground {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    60%{
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(110px);
+    }
+}
+.sideLines{
+    display: flex;
+    position: fixed;
+    height: 100%;
+    right: -10px;
+    border-right: 1px solid white;
+    animation: sideLinesBackground 0.5s linear 3s;
+    animation-fill-mode: forwards;
+    z-index: 81;
+}
+@keyframes  sideLinesBackground{
+    0% {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    60%{
+        opacity: 0;
+        transform: translateX(-230px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-260px);
+    }
+}
+.toptb{
+    display: flex;
+    position: fixed;
+    right: 100%;
+    height:80px;
+}
+.toptb1{
+    position: fixed;
+    display: flex;
+    font-family: iconfont;/*导入iconfont图标*/
+    color: white;
+    opacity: 0.8;
+    font-size: 40px;
+    left: 97.5%;
+    margin-top: 1.8%;
+    animation: toptb1Background 4s linear 0s;
+    animation-fill-mode: forwards;
+}
+.toptb1:hover{
+    color: skyblue;
+}
+@keyframes toptb1Background {
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.toptb2{
+    position: fixed;
+    display: flex;
+    font-family: iconfont;
+    color: skyblue;
+    opacity: 0.8;
+    font-size: 40px;
+    margin-left: 93.5%;
+    margin-top: 1.8%;
+    animation: toptb2Background 4s linear 0s;
+    animation-fill-mode: forwards;
+}
+@keyframes toptb2Background {
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.toptb3{
+    position: fixed;
+    display: flex;
+    font-family: iconfont;
+    color: white;
+    opacity: 0.8;
+    font-size: 45px;
+    margin-left: 89%;
+    margin-top: 1.7%;
+    animation: toptb3Background 4s linear 0s;
+    animation-fill-mode: forwards;
+}
+.toptb3:hover{
+    color: skyblue;
+}
+@keyframes toptb3Background {
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.sidesj{
+    display: flex;
+    top: 50%;
+    left: 300px;
+    left: 80%;
+    z-index: 998;
+}
+.sj1{
+    position: fixed;
+    display: flex;
+    color: #0099ff;
+    right: 130px;
+    bottom: -110px;
+    font-size: 65px;
+    font-weight: 900;
+    animation: sj1Background 1s linear 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes sj1Background {
+    0% {
+        opacity: 0;
+        transform: translateY(-400px);
+    }
+    60% {
+        opacity: 0;
+        transform: translateY(-500px);
+    }
+    80% {
+        opacity: 0;
+        transform: translateY(-550px);
+    }
+    90% {
+        opacity: 0.8;
+        transform: translateY(-570px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-590px);
+    }
+}
+.sj2{
+    position: fixed;
+    display: flex;
+    color: white;
+    right: 4%;
+    bottom: -20px;
+    font-size: 15px;
+    font-style: italic;
+    animation: sj2Background 1.3s linear 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes sj2Background {
+    0% {
+        opacity: 0;
+        transform: translateY(-400px);
+    }
+    60% {
+        opacity: 0;
+        transform: translateY(-450px);
+    }
+    80% {
+        opacity: 0;
+        transform: translateY(-490px);
+    }
+    90% {
+        opacity: 0.8;
+        transform: translateY(-520px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-540px);
+    }
+}
+.sj3{
+    position: fixed;
+    display: flex;
+    color: white;
+    right: 3.8%;
+    bottom: -10px;
+    font-size: 7px;
+    font-weight: 900;
+    font-style: italic;
+    animation: sj3Background 1.5s linear 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes sj3Background {
+    0% {
+        opacity: 0;
+        transform: translateY(-400px);
+    }
+    60% {
+        opacity: 0;
+        transform: translateY(-450px);
+    }
+    80% {
+        opacity: 0;
+        transform: translateY(-490px);
+    }
+    90% {
+        opacity: 0.8;
+        transform: translateY(-500px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-520px);
+    }
+}
+.sj4{
+    display: flex;
+    position: fixed;
+    color: white;
+    width: 142px;
+    height: 40px;
+    right: 55px;
+    bottom: -50px;
+    font-size: 16px ;
+    font-weight: 900;
+    font-style: italic;
+    animation: sj4Background 1.8s linear 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes sj4Background {
+    0% {
+        opacity: 0;
+        transform: translateY(-400px);
+    }
+    60% {
+        opacity: 0;
+        transform: translateY(-420px);
+    }
+    80% {
+        opacity: 0;
+        transform: translateY(-446px);
+    }
+    90% {
+        opacity: 0.8;
+        transform: translateY(-476px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-510px);
+    }
+}
+.js{
+    display:flex;
+    position: fixed;
+    height: 700px;
+    width: 600px;
+    background-color:black;
+    top: 180px;
+    left: 50px;
+    animation: jsBackground 4s linear 0s;
+    animation-fill-mode: forwards;
+}
+@keyframes jsBackground {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/*第一个选项的设置跟点击事件*/
+.ys{
+    display: flex;
+    position: relative;
+    height: 80px;
+    width: 550px;
+    margin-left: 50px;
+    color: gray;
+    border-bottom: 2px solid gray;/*给盒子底部加上一条横线颜色灰色*/
+    cursor:pointer;
+}
+/*给上绝对定位，不然字体乱跑*/
+.ori1{
+position: absolute;
+}
+/*鼠标事件*/
+.ys:hover{
+    color: white;
+    border-color:white;
+}
+.ori2{
+    margin-top: 26px;
+    margin-left: 100px;
+}
+/*第一个选项图片显示效果*/
+.ori3{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    margin-left: 350px;
+    margin-top: -120px;
+    opacity: 0;
+    transition: opacity 0.3s ease;/*加上一个缓慢出现的效果延迟0.3秒显示*/
+    z-index: -1;
+}
+.ori3 img{
+    margin-top: -100px;
+    height: 200%;
+    width: 200%;
+}
+.ys:hover .ori3{
+    opacity: 1;
+}
+/*第一个选项字体显现效果*/
+.ori4{
+    position: absolute;
+    color:cornflowerblue;
+    opacity: 0;
+    z-index: -1;
+    margin-left: 150px;
+    transition: opacity 0.3s ease;
+}
+.ys:hover .ori4{
+    opacity: 0.5;
+}
+/*第二个选项设置*/
+.ysjy{
+    display: flex;
+    position: fixed;
+    height: 80px;
+    width: 550px;
+    top: 280px;
+    margin-left: 50px;
+    color: gray;
+    border-bottom: 2px solid gray;
+    cursor:pointer;
+}
+.ysjy:hover{
+    color: white;
+    border-color: white;
+}
+.jy1{
+    position: absolute;
+}
+.jy2{
+    margin-top: 26px;
+    margin-left: 190px;
+    white-space: nowrap;
+}
+.jy3{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    margin-left: 350px;
+    margin-top: -120px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+.jy3 img{
+    margin-top: -100px;
+    height: 200%;
+    width: 200%;
+}
+.ysjy:hover .jy3{
+    opacity: 1;
+}
+.jy4{
+    position: absolute;
+    color:cornflowerblue;
+    opacity: 0;
+    z-index: -1;
+    margin-left: 10px;
+    transition: opacity 0.3s ease;
+}
+.ysjy:hover .jy4{
+    opacity: 0.5;
+}
+/*第三个选项设置*/
+.zhyd{
+    display: flex;
+    position: fixed;
+    height: 80px;
+    width: 550px;
+    top: 380px;
+    color: gray;
+    margin-left: 50px;
+    border-bottom: 2px solid gray;
+    cursor:pointer;
+}
+.zhyd1{
+    position: absolute;
+}
+.zhyd:hover{
+    color: white;
+    border-color: white;
+}
+.zhyd2{
+    margin-top: 26px;
+    margin-left: 190px;
+}
+.zhyd3{
+    position: absolute;
+    height: 200px;
+    width:200px;
+    margin-left: 350px;
+    margin-top: -120px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+.zhyd3 img{
+    margin-top: -100px;
+    height: 200%;
+    width: 200%;
+}
+.zhyd:hover .zhyd3{
+    opacity: 1;
+}
+.zhyd4{
+    position: absolute;
+    color:cornflowerblue;
+    opacity: 0;
+    z-index: -1;
+    margin-left: 230px;
+    transition: opacity 0.3s ease;
+}
+.zhyd:hover .zhyd4{
+    opacity: 0.5;
+}
+/*第四个选项设置*/
+.grz{
+    display: flex;
+    position: fixed;
+    height: 80px;
+    width: 550px;
+    top: 480px;
+    color: gray;
+    margin-left: 50px;
+    border-bottom: 2px solid gray;
+    cursor:pointer;
+}
+.grz:hover{
+    color: white;
+    border-color: white;
+}
+.grz2{
+    margin-top: 26px;
+    margin-left: 30px;
+}
+.grz3{
+    position: absolute;
+    height: 200px;
+    width:200px;
+    margin-left: 350px;
+    margin-top: -120px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+.grz3 img{
+    margin-top: -100px;
+    height: 200%;
+    width: 200%;
+}
+.grz:hover .grz3{
+    opacity: 1;
+}
+.grz4{
+    position: absolute;
+    color:cornflowerblue;
+    opacity: 0;
+    z-index: -1;
+    margin-left: 220px;
+    transition: opacity 0.3s ease;
+}
+.grz:hover .grz4{
+    opacity: 0.5;
+}
+/*第五个选项设置*/
+.ydcb{
+    display: flex;
+    position: fixed;
+    height: 80px;
+    width: 550px;
+    top: 580px;
+    color: gray;
+    margin-left: 50px;
+    border-bottom: 2px solid gray;
+    cursor:pointer;
+}
+.ydcb:hover{
+    color: white;
+    border-color: white;
+}
+.ydcb2{
+    margin-top: 26px;
+    margin-left: 30px;
+}
+.ydcb3{
+    position: absolute;
+    height: 200px;
+    width:200px;
+    margin-left: 350px;
+    margin-top: -120px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+.ydcb3 img{
+    margin-top: -100px;
+    height: 200%;
+    width: 200%;
+}
+.ydcb:hover .ydcb3{
+    opacity: 1;
+}
+.ydcb4{
+    position: absolute;
+    color:cornflowerblue;
+    opacity: 0;
+    z-index: -1;
+    margin-left: 60px;
+    transition: opacity 0.3s ease;
+}
+.ydcb:hover .ydcb4{
+    opacity: 0.5;
+}
+/*第六个选项设置*/
+.ldd{
+    display: flex;
+    position: fixed;
+    height: 80px;
+    width: 550px;
+    top: 680px;
+    color: gray;
+    margin-left: 50px;
+    border-bottom: 2px solid gray;
+    cursor:pointer;
+}
+.ldd:hover{
+    color: white;
+    border-color: white;
+}
+.ldd2{
+    margin-top: 26px;
+    margin-left: 30px;
+}
+.ldd3{
+    position: absolute;
+    height: 200px;
+    width:200px;
+    margin-left: 350px;
+    margin-top: -120px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+.ldd3 img{
+    margin-top: -100px;
+    height: 200%;
+    width: 200%;
+}
+.ldd:hover .ldd3{
+    opacity: 1;
+}
+.ldd4{
+    position: absolute;
+    color:cornflowerblue;
+    opacity: 0;
+    z-index: -1;
+    margin-left: 30px;
+    transition: opacity 0.3s ease;
+}
+.ldd:hover .ldd4{
+    opacity: 0.5;
+}
